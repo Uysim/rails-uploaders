@@ -1,0 +1,2 @@
+module CarrierwavePostsHelper
+end
