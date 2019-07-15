@@ -1,0 +1,30 @@
+<h1 class="mt-5">Active Storage Posts</h1>
+<%= link_to 'New Active Storage Post', new_active_storage_post_path, class: "btn btn-primary float-right" %>
+<div class="table-responsive mt-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @active_storage_posts.each do |active_storage_post| %>
+        <tr>
+          <td><%= active_storage_post.title %></td>
+          <td><%= image_tag url_for(active_storage_post.image), class: "rounded", width: 100, height: 100 %></td>
+          <td><%= active_storage_post.description %></td>
+          <td>
+            <%= link_to 'Show', active_storage_post %>
+            |
+            <%= link_to 'Edit', edit_active_storage_post_path(active_storage_post) %>
+            |
+            <%= link_to 'Destroy', active_storage_post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
