@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :shrine_posts
   resources :active_storage_posts
   resources :carrierwave_posts
   root 'pages#home'

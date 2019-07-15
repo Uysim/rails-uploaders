@@ -1,0 +1,31 @@
+<h1>Shrine Posts</h1>
+<%= link_to 'New Shrine Post', new_shrine_post_path, class: "btn btn-primary float-right" %>
+<div class="table-responsive mt-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Image data</th>
+        <th>Description</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @shrine_posts.each do |shrine_post| %>
+        <tr>
+          <td><%= shrine_post.title %></td>
+          <td><%= image_tag shrine_post.image_url, class: "rounded", width: 100, height: 100 %></td>
+          <td><%= shrine_post.description %></td>
+          <td>
+            <%= link_to 'Show', shrine_post %>
+            |
+            <%= link_to 'Edit', edit_shrine_post_path(shrine_post) %>
+            |
+            <%= link_to 'Destroy', shrine_post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

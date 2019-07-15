@@ -1,3 +1,3 @@
 class CarrierwavePost < ApplicationRecord
-  mount_uploader :image, ImageUploader
+  mount_uploader :image, CarrierwaveImageUploader
 end

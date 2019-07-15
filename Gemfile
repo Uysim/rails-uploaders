@@ -14,6 +14,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'carrierwave'
+gem 'shrine'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
